@@ -1,14 +1,9 @@
 // Original Author: Mike Reich (https://github.com/sensamo/sim900js)
 // Tyler McDowall (Acenth)
 
-var mraa = require('mraa');
 var sp = require('serialport');
 
 var GSM = function(port, baud) {  
-    if (!port) {
-        var uart = new mraa.Uart(0);
-        port = uart.getDevicePath();
-    }
     
     if (!baud) {
         baud = 9600;
